@@ -1,0 +1,24 @@
+//First problem taken from Codechef from DSA series
+//Zack and The Handkerchieves
+//code in C++
+#include <iostream>
+using namespace std;
+int solution(int L,int B)
+{
+    if(B==0)
+        return L;
+    return solution(B,L%B);    
+}
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int L,B;
+	    cin>>L>>B;
+	    cout<<solution(L,B)<<"\n";
+	}
+	
+	return 0;
+}
